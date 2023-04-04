@@ -28,35 +28,36 @@ The MVP is a Webscraper bot that will be able to obtain information about bankin
 ### Part 2: Learning Objectives
 
 My learning goals include:
-    1. Learning how to create a webscraper using Beautiful Soup, and improving upon it using ChatGPT and OpenAI API.
-        - Learning more about the contents within a website, and how does a webscraper bot scrape it.
-    2. Learning how to create a more visually pleasing website, with more functions and interactions, such as uploading/downloading.
+    1. Learning how to create a webscraper using Beautiful Soup, and improving upon it using ChatGPT and OpenAI API.\
+        - Learning more about the contents within a website, and how does a webscraper bot scrape it.\
+    2. Learning how to create a more visually pleasing website, with more functions and interactions, such as uploading/downloading.\
     3. Getting better at creating test cases for code and also debugging.
 
 ### Part 3: Implementation Plan
 
 My implementation plan includes the following:
-    1. APIs and libraries
-        - Beautiful Soup
-        - ChatGPT/OpenAI API
+    1. APIs and libraries\
+        - Beautiful Soup\
+        - ChatGPT/OpenAI API\
 
 ### Part 4: Project Schedule
 
--------------Week 1 (4/8/2023-4/14/2023)-------------
+-------------Week 1 (4/8/2023-4/14/2023)-------------\
 
-Task                                      Deadline
-Be familiarized with Beautiful Soup       4/10/2023
+Task                                      Deadline\
+Be familiarized with Beautiful Soup       4/10/2023\
 
 
-------------Week 2 (4/15/2023-4/21/2023)------------
-Task                                      Deadline
-Building website                          4/18/2023
-Debugging website and finalizing          4/21/2023
+------------Week 2 (4/15/2023-4/21/2023)------------\
+Task                                      Deadline\
+Building website                          4/18/2023\
+Debugging website and finalizing          4/21/2023\
 
---------------Week 3 (4/22/2023 - DUE)--------------
-Task                                      Deadline
-Write documentation and revise as needed  4/25/2023
-Submit final product                      DUE
+--------------Week 3 (4/22/2023 - DUE)--------------\
+Task                                      Deadline\
+Write documentation and revise as needed  4/25/2023\
+Submit final product                      DUE\
+
 ### Part 5: Collaboration Plan
 
 ### Part 6: Risks and Limitations
