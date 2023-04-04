@@ -38,22 +38,24 @@ My learning goals include:
 My implementation plan includes the following:
     1. APIs and libraries\
         - Beautiful Soup\
-        - ChatGPT/OpenAI API\
+        - ChatGPT/OpenAI API
 
 ### Part 4: Project Schedule
 
--------------Week 1 (4/8/2023-4/14/2023)-------------\
+-------------Week 1 (4/8/2023-4/14/2023)-------------
 
 Task                                      Deadline\
 Be familiarized with Beautiful Soup       4/10/2023\
 
 
-------------Week 2 (4/15/2023-4/21/2023)------------\
+------------Week 2 (4/15/2023-4/21/2023)------------
+
 Task                                      Deadline\
 Building website                          4/18/2023\
 Debugging website and finalizing          4/21/2023\
 
---------------Week 3 (4/22/2023 - DUE)--------------\
+--------------Week 3 (4/22/2023 - DUE)--------------
+
 Task                                      Deadline\
 Write documentation and revise as needed  4/25/2023\
 Submit final product                      DUE\
