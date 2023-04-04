@@ -58,7 +58,7 @@ Debugging website and finalizing          4/21/2023\
 
 Task                                      Deadline\
 Write documentation and revise as needed  4/25/2023\
-Submit final product                      DUE\
+Submit final product                      DUE
 
 ### Part 5: Collaboration Plan
 
