@@ -1,8 +1,8 @@
 ## Project Proposal
 Due: 4/6/2023
 
-The project proposal is worth 12% of the project grade.
-Your proposal should contain seven parts, as specified below. The document need not be very long, but the more detail you include, the better feedback we can provide for your team:
+<!-- The project proposal is worth 12% of the project grade.
+Your proposal should contain seven parts, as specified below. The document need not be very long, but the more detail you include, the better feedback we can provide for your team: -->
 
 <!-- The Big Idea: What is the main idea of your project? What topics will you explore and what will you accomplish? Describe your minimum viable product (MVP) and your stretch goal.
 Learning Objectives: Since this is a team project, you may want to articulate both shared and individual learning goals.
