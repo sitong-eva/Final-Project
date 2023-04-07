@@ -45,6 +45,7 @@ My implementation plan includes using the following:
 2. Web app/final product
       - Using Flask, HTML/CSS
       - Testing the fucntionalities for website with friends and family 
+  
 
 ### Part 4: Project Schedule
 
