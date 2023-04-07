@@ -40,7 +40,7 @@ My implementation plan includes using the following:
 1. Tarot reading
     - APIs and libraries
          - https://github.com/ekelen/tarot-api\
-         - ChatGPT/OpenAI API
+         - ChatGPT/OpenAI API - using the ChatGPT/OpenAI API to make the responses sound like it could be from a real human being and that it makes sense.
 
 2. Web app/final product
       - Using Flask, HTML/CSS
