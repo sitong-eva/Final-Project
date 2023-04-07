@@ -37,36 +37,36 @@ My learning goals include:\
 ### Part 3: Implementation Plan
 
 My implementation plan includes using the following:
-    1. Tarot reading
-           - APIs and libraries\
-             - https://github.com/ekelen/tarot-api\
-             - ChatGPT/OpenAI API
+1. Tarot reading
+    - APIs and libraries\
+         - https://github.com/ekelen/tarot-api\
+         - ChatGPT/OpenAI API
 
-    2. Web app/final product
-           - Testing the fucntionalities for website with friends and family 
+2. Web app/final product
+       - Testing the fucntionalities for website with friends and family 
 
 ### Part 4: Project Schedule
 
 -------------Week 1 (4/8/2023-4/14/2023)-------------
 
-Phase - Tarot Reading                     Deadline\
------                                     ---------\
-Experiment with API and code              4/10/2023\
-Test & debug code                         4/14/2023
+Phase - Tarot Reading | Deadline
+
+Experiment with API and code | 4/10/2023\
+Test & debug code | 4/14/2023
 
 ------------Week 2 (4/15/2023-4/21/2023)------------
 
-Phase - Website                           Deadline\
------                                     ---------\
-Build website                             4/15/2023\
-Debug website, testing, and finalizing    4/23/2023
+Phase - Website | Deadline
+
+Build website | 4/15/2023\
+Debug website, testing, and finalizing | 4/23/2023
 
 --------------Week 3 (4/22/2023 - DUE)--------------
 
-Phase - Wrap-up                           Deadline\
------                                     ---------\
-Write documentation and revise as needed  4/25/2023\
-Make changes and submit project           DUE
+Phase - Wrap-up | Deadline
+
+Write documentation and revise as needed | 4/25/2023\
+Make changes and submit project | DUE
 
 ### Part 5: Collaboration Plan
 
