@@ -38,12 +38,13 @@ My learning goals include:\
 
 My implementation plan includes using the following:
 1. Tarot reading
-    - APIs and libraries\
+    - APIs and libraries
          - https://github.com/ekelen/tarot-api\
          - ChatGPT/OpenAI API
 
 2. Web app/final product
-       - Testing the fucntionalities for website with friends and family 
+      - Using Flask, HTML/CSS
+      - Testing the fucntionalities for website with friends and family 
 
 ### Part 4: Project Schedule
 
