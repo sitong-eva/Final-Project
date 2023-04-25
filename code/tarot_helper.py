@@ -94,25 +94,8 @@ def draw_general():
     )
     return general
 
-def answer(type):
-    if type == "love":
-        tarot = draw_love()
-        print(tarot)
-        prompt = f"Act as if you are a tarot card reader. Provide a reading on a song about {type}. The tarot spread goes like this: the first card represents the past, the second represents the present, and the third represents the future. I drew these cards from the deck: {tarot}. Please provide concise and complete sentences to interpret the cards for {type}."
-        # response from ChatGPT
-        response = openai.Completion.create(
-            engine="davinci",
-            prompt=prompt,
-            max_tokens=500,
-            n=1,
-            stop=None,
-            temperature=0.4,
-        )
-        assistant_reply = response.choices[0].text.strip()
-        print("Assistant's interpretation:")
-        print(assistant_reply)
 
-    """
+"""
     From Text Analysis Project:
 
     model_engine = "davinci"
@@ -132,7 +115,73 @@ def answer(type):
 
     sentence = response.choices[0].text.strip()
     return sentence
-    """
+"""
+
+
+def love_reading():
+    tarot = draw_love()
+    print(tarot)
+    love_1 = tarot[0]
+    love_2 = tarot[1]
+    love_3 = tarot[2]
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{love_1}' in the context of past love experiences. Please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response1 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=100,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply1 = response1.choices[0].text.strip()
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{love_2}' in the context of current love experiences. Please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response2 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=100,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply2 = response2.choices[0].text.strip()
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{love_3}' in the context of past love experiences in under 200 words. Please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response3 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply3 = response3.choices[0].text.strip()
+
+    return f"Your tarot reading\nPast love: \n{reply1}\nPresent love:\n{reply2}\nFuture love:\n{reply3}"
+
+
+def answer(type):
+    if type=="love":
+        return love_reading()
+    if type=="yearly forecast":
+        pass
+    if type=="career":
+        pass
+    if type=="general":
+        pass
+
 
 def main():
     # print(draw_love())
@@ -140,7 +189,8 @@ def main():
     # print(draw_career())
     # print(draw_general())
 
-    answer("love")
+    print(answer("love"))
+
 
 
 if __name__ == "__main__":
