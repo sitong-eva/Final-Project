@@ -75,26 +75,6 @@ def draw_career():
     career = career_stay_leave, career_new_oopportunity, career_advice
     return career
 
-
-def draw_general():
-    """
-    https://preview.redd.it/w40oounkrla41.jpg?auto=webp&s=a55784d2df3029d5efe4e6ceea2fd1b295e4f6b3
-    """
-    general_as_is = random.choices(lst)
-    general_correct_path = random.choices(lst)
-    general_main_obstacle = random.choices(lst)
-    general_help = random.choices(lst)
-    general_progress = random.choices(lst)
-    general = (
-        general_as_is,
-        general_correct_path,
-        general_main_obstacle,
-        general_help,
-        general_progress,
-    )
-    return general
-
-
 """
     From Text Analysis Project:
 
@@ -124,7 +104,7 @@ def love_reading():
     love_1 = tarot[0]
     love_2 = tarot[1]
     love_3 = tarot[2]
-    prompt = f"Write a paragraph describing the meaning of the tarot card '{love_1}' in the context of past love experiences. Please be specific."
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{love_1}' in the context of past love experiences. Make sure you state what card it is and please be specific."
 
     # Make an API call to ChatGPT for generating the paragraph
     response1 = openai.Completion.create(
@@ -139,7 +119,7 @@ def love_reading():
     # Extract the generated text from the API response
     reply1 = response1.choices[0].text.strip()
 
-    prompt = f"Write a paragraph describing the meaning of the tarot card '{love_2}' in the context of current love experiences. Please be specific."
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{love_2}' in the context of current love experiences. Make sure you state what card it is and please be specific."
 
     # Make an API call to ChatGPT for generating the paragraph
     response2 = openai.Completion.create(
@@ -154,7 +134,7 @@ def love_reading():
     # Extract the generated text from the API response
     reply2 = response2.choices[0].text.strip()
 
-    prompt = f"Write a paragraph describing the meaning of the tarot card '{love_3}' in the context of past love experiences in under 200 words. Please be specific."
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{love_3}' in the context of past love experiences in under 200 words. Make sure you state what card it is and please be specific."
 
     # Make an API call to ChatGPT for generating the paragraph
     response3 = openai.Completion.create(
@@ -171,17 +151,184 @@ def love_reading():
 
     return f"Your tarot reading\nPast love: \n{reply1}\nPresent love:\n{reply2}\nFuture love:\n{reply3}"
 
+def yearly_forecast_reading():
+    tarot = draw_yearly_forecast()
+    print(tarot)
+    yearly_1 = tarot[0]
+    yearly_2 = tarot[1]
+    yearly_3 = tarot[2]
+    yearly_4=tarot[3]
+    yearly_5=tarot[4]
+    yearly_6=tarot[5]
+    yearly_7=tarot[6]
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{yearly_1}' in the context of this year's main theme. Make sure you state what card it is and please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response1 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=100,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply1 = response1.choices[0].text.strip()
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{yearly_2}' in the context of this year's departing energies. Make sure you state what card it is and please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response2 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=100,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply2 = response2.choices[0].text.strip()
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{yearly_3}' in the context of this year's talents in under 200 words. Make sure you state what card it is and please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response3 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply3 = response3.choices[0].text.strip()
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{yearly_4}' in the context of this year's opportunities in under 200 words. Make sure you state what card it is and please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response4 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply4 = response4.choices[0].text.strip()
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{yearly_5}' in the context of this year's obstacles in under 200 words. Make sure you state what card it is and please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response5 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply5 = response5.choices[0].text.strip()
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{yearly_6}' in the context of this year's ways to deal with obstacles in under 200 words. Make sure you state what card it is and please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response6 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply6 = response6.choices[0].text.strip()
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{yearly_7}' in the context of this year's achievements in under 200 words. Make sure you state what card it is and please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response7 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply7 = response7.choices[0].text.strip()
+
+    return f"Your tarot reading\nMain theme: \n{reply1}\nDeparting energies:\n{reply2}\nThis year's talents: \n{reply3} \nFuture opportunities:\n{reply4}\nObstacles:\n{reply5}\nHow to deal with obstacles:\n{reply6}\nThis year's achievements:\n{reply7}"
+
+def career_reading():
+    tarot = draw_career()
+    print(tarot)
+    career_1 = tarot[0]
+    career_2 = tarot[1]
+    career_3 = tarot[2]
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{career_1}' in the context of past career experiences. Make sure you state what card it is and please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response1 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=100,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply1 = response1.choices[0].text.strip()
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{career_2}' in the context of current career experiences. Make sure you state what card it is and please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response2 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=100,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply2 = response2.choices[0].text.strip()
+
+    prompt = f"Write a paragraph describing the meaning of the tarot card '{career_3}' in the context of past career experiences in under 200 words. Make sure you state what card it is and please be specific."
+
+    # Make an API call to ChatGPT for generating the paragraph
+    response3 = openai.Completion.create(
+        model="text-davinci-002",
+        prompt=prompt,
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+
+    # Extract the generated text from the API response
+    reply3 = response3.choices[0].text.strip()
+
+    return f"Your tarot reading\nPast career: \n{reply1}\nPresent career:\n{reply2}\nFuture career:\n{reply3}"
 
 def answer(type):
     if type=="love":
         return love_reading()
     if type=="yearly forecast":
-        pass
+        return yearly_forecast_reading()
     if type=="career":
-        pass
-    if type=="general":
-        pass
-
+        return career_reading()
 
 def main():
     # print(draw_love())
@@ -189,9 +336,7 @@ def main():
     # print(draw_career())
     # print(draw_general())
 
-    print(answer("love"))
-
-
+    # print(answer("career"))
 
 if __name__ == "__main__":
     main()
