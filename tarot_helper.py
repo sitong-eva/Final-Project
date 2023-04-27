@@ -336,7 +336,7 @@ def main():
     # print(draw_career())
     # print(draw_general())
 
-    # print(answer("career"))
+    print(answer("career"))
 
 if __name__ == "__main__":
     main()
