@@ -184,6 +184,24 @@
 
             </section>
         </div>
+        <script>
+            const getReadingButton = document.querySelector('button[type="submit"]');
+        
+            getReadingButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                const dobInput = document.getElementById('dob');
+                const readingTypeInput = document.querySelector('input[name="reading-type"]:checked');
+                const formData = {
+                    dob: dobInput.value,
+                    readingType: readingTypeInput ? readingTypeInput.value : null
+                };
+        
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '/horoscope', true);
+                xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+                xhr.send(JSON.stringify(formData));
+            });
+        </script>
         <!-- End Tarot Card Section -->
 
 

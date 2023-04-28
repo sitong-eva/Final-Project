@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from tarot_helper import answer
 from horoscope_helper import horoscope_yay
 import os
+import json
 
 app = Flask(__name__, static_folder="assets")
 
@@ -56,8 +57,9 @@ def general_get():
 @app.route("/horoscope/", methods=["GET", "POST"])
 def horoscope_get():
     if request.method == "POST":
-        dob=request.form("dob")
-        print(dob)
+        dob=request.json['dob']
+        reading_type=request.json['readingType']
+        # print(dob)
         return render_template("horoscope_result.html",horoscope_result=dob)
         # horoscope_result=horoscope_yay
     #     return render_template(
