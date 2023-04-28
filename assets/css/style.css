@@ -229,6 +229,16 @@ h6,
   visibility: visible;
 }
 
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  font-size: .875em;
+  white-space: pre-wrap;
+  text-align: -webkit-left;
+}
+
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;

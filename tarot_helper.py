@@ -149,7 +149,7 @@ def love_reading():
     # Extract the generated text from the API response
     reply3 = response3.choices[0].text.strip()
 
-    return f"Your tarot reading\nPast love: \n{reply1}\nPresent love:\n{reply2}\nFuture love:\n{reply3}"
+    return f"\nPast love: \n{reply1}\nPresent love:\n{reply2}\nFuture love:\n{reply3}"
 
 def yearly_forecast_reading():
     tarot = draw_yearly_forecast()
@@ -267,7 +267,7 @@ def yearly_forecast_reading():
     # Extract the generated text from the API response
     reply7 = response7.choices[0].text.strip()
 
-    return f"Your tarot reading\nMain theme: \n{reply1}\nDeparting energies:\n{reply2}\nThis year's talents: \n{reply3} \nFuture opportunities:\n{reply4}\nObstacles:\n{reply5}\nHow to deal with obstacles:\n{reply6}\nThis year's achievements:\n{reply7}"
+    return f"\nMain theme: \n{reply1}\nDeparting energies:\n{reply2}\nThis year's talents: \n{reply3} \nFuture opportunities:\n{reply4}\nObstacles:\n{reply5}\nHow to deal with obstacles:\n{reply6}\nThis year's achievements:\n{reply7}"
 
 def career_reading():
     tarot = draw_career()
@@ -320,7 +320,7 @@ def career_reading():
     # Extract the generated text from the API response
     reply3 = response3.choices[0].text.strip()
 
-    return f"Your tarot reading\nPast career: \n{reply1}\nPresent career:\n{reply2}\nFuture career:\n{reply3}"
+    return f"\nPast career: \n{reply1}\nPresent career:\n{reply2}\nFuture career:\n{reply3}"
 
 def answer(type):
     if type=="love":
@@ -336,7 +336,7 @@ def main():
     # print(draw_career())
     # print(draw_general())
 
-    print(answer("career"))
+    print(answer("love"))
 
 if __name__ == "__main__":
     main()
