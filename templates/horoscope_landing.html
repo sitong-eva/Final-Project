@@ -28,14 +28,29 @@
 
     <!-- Template Main CSS File -->
     <link href="../assets/css/style.css" rel="stylesheet">
+    <!-- <script>
+        // Add your JavaScript code here
+        const form = document.querySelector('#horoscope-form');
+        form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const month = document.querySelector('#birth-month').value;
+        const day = document.querySelector('#birth-day').value;
+        const year = document.querySelector('#birth-year').value;
+        print(month)
+        print(day)
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/horoscope_reading');
+        xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+        const formData = {
+            month: month,
+            day: day,
+            year: year ? year : null
+        };
+        const jsonFormData = JSON.stringify(formData);
+        xhr.send(jsonFormData);
+        });
+    </script> -->
 
-    <!-- =======================================================
-  * Template Name: Ninestars
-  * Updated: Mar 10 2023 with Bootstrap v5.2.3
-  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -52,11 +67,11 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#instructions">Instructions</a></li>
-                    <li><a class="nav-link scrollto" href="#tarot">Tarot Reader</a></li>
+                    <li><a class="nav-link scrollto active" href="/#hero">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/#instructions">Instructions</a></li>
+                    <li><a class="nav-link scrollto" href="/#tarot">Tarot Reader</a></li>
                 </ul>
-                <li><a class="getstarted scrollto" href="#instructions">Get Started</a></li>
+                <li><a class="getstarted scrollto" href="/#instructions">Get Started</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -64,142 +79,30 @@
         </div>
     </header><!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center">
-
-        <div class="container">
-            <div class="row gy-4">
-                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h1>Discover your destiny with the guidance of the cards</h1>
-                    <h2>This web app uses the power of tarot to offer guidance and empower you to navigate life's
-                        challenges with confidence. Let's uncover your true path together.
-
-                    </h2>
-                    <div>
-                        <a href="#instructions" class="btn-get-started scrollto">Get Started</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                    <img src="../assets/img/artsculture2-1-aa051e124b133e37.jpeg" class="img-fluid animated" alt="">
-                </div>
-            </div>
-        </div>
-
-    </section><!-- End Hero -->
-
     <main id="main">
 
-        <!-- ======= Instructions Section ======= -->
-        <section id="instructions" class="instructions">
+        <section id="horoscope-form" class="horoscope-form">
             <div class="container">
-
-                <div class="row justify-content-between">
-                    <div class="col-lg-5 d-flex align-items-center justify-content-center about-img">
-                        <img src="../assets/img/depositphotos_509334224-stock-illustration-soothsayer-fortune-teller-guessing-on.jpeg"
-                            class="img-fluid" alt="" data-aos="zoom-in">
-                    </div>
-                    <div class="col-lg-6 pt-5 pt-lg-0">
-                        <h3 data-aos="fade-up">Discover Your Fate: How to Use Our Tarot Reader Web App.
-                        </h3>
-                        <p data-aos="fade-up" data-aos-delay="100">
-                            Welcome to our tarot reader web app! Our app is designed to help you uncover the mysteries
-                            of your future by providing personalized tarot card readings. With our easy-to-use
-                            interface, you can shuffle the cards and receive an interpretation of the cards that are
-                            drawn.
-
-                            Once you're ready, scroll down to shuffle the cards and receive your interpretation. Our app
-                            presents you with a selection of cards, each with its unique meaning and interpretation.
-                            Whether you're new to tarot or a seasoned reader, our easy-to-use interface makes it simple
-                            to get your tarot reading.
-
-                            Our tarot reader web app is an excellent tool for those seeking guidance, insight, and
-                            inspiration. So why wait? Scroll down now to get your tarot reading and unlock the secrets
-                            of your destiny!
-
-
-                        </p>
-                    </div>
-                </div>
+                <form id="horoscope-form" method="POST" action="/horoscope_reading">
+                    <label for="birth-month">Month:</label>
+                    <input type="number" name="birth-month" id="birth-month" min="1" max="12" required>
+                  
+                    <label for="birth-day">Day:</label>
+                    <input type="number" name="birth-day" id="birth-day" min="1" max="31" required>
+                  
+                    <label for="birth-year">Year:</label>
+                    <input type="number" name="birth-year" id="birth-year" min="1900" max="2100" required>
+                  
+                    <button type="submit"
+                            style="background-color: #eb5d1e; border-radius: 20px; padding: 10px 20px; color: white; font-weight: bold; border: none; transition: all 0.3s ease;">
+                      Submit
+                    </button>
+                </form>
             </div>
+        </section>
 
-            </div>
-        </section><!-- End Instructions Section -->
 
-        <!-- ======= Tarot Card Section ======= -->
-        <div style="display: flex; justify-content: center;">
-            <section id="tarot" class="tarot">
-                <div class="container" data-aos="fade-up">
-                    <div class="section-title">
-                        <h2>Choose a Reading</h2>
-                        <p>Select the type of reading you want</p>
-                    </div>
-                    <form method="post" role="form" class="php-email-form" name="want">
-                        <div class="row">
-                            <div class="form-group col-md-12">
-                                <label for="reading-type" style="font-weight: bold;">Type of Reading:</label>
-                                <br>
-                                <div class="reading-type">
-                                    <label for="love">
-                                        <input type="radio" name="reading-type" id="love" value="love" required> Love
-                                        and Relationships
-                                    </label>
-                                    <br>
-                                    <label for="career">
-                                        <input type="radio" name="reading-type" id="career" value="career"> Career and
-                                        Finances
-                                    </label>
-                                    <br>
-                                    <label for="general">
-                                        <input type="radio" name="reading-type" id="general" value="general"> General
-                                        Life Advice
-                                    </label>
-                                    <br>
-                                    <label for="horoscope">
-                                        <input type="radio" name="reading-type" id="horoscope" value="horoscope">
-                                        Horoscope
-                                    </label>
-                                    <br>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" onclick="event.preventDefault(); 
-                                          if (document.getElementById('love').checked) { 
-                                            window.location.href = '/love_reading'; 
-                                          } else if (document.getElementById('career').checked) { 
-                                            window.location.href = '/career_reading'; 
-                                          } else if (document.getElementById('general').checked) { 
-                                            window.location.href = '/general_reading'; 
-                                          } else if (document.getElementById('horoscope').checked) { 
-                                            window.location.href = '/horoscope'; 
-                                          }" 
-                                style="background-color: #eb5d1e; border-radius: 20px; padding: 10px 20px; color: white; font-weight: bold; border: none; transition: all 0.3s ease;">Get
-                                    reading</button>
-                            </div>                            
-                        </div>
-                    </form>
-                </div>
 
-            </section>
-        </div>
-        <script>
-            const getReadingButton = document.querySelector('button[type="submit"]');
-        
-            getReadingButton.addEventListener('click', function(event) {
-                event.preventDefault();
-                const dobInput = document.getElementById('dob');
-                const readingTypeInput = document.querySelector('input[name="reading-type"]:checked');
-                const formData = {
-                    dob: dobInput.value,
-                    readingType: readingTypeInput ? readingTypeInput.value : null
-                };
-        
-                const xhr = new XMLHttpRequest();
-                xhr.open('POST', '/horoscope', true);
-                xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-                xhr.send(JSON.stringify(formData));
-            });
-        </script>
-        <!-- End Tarot Card Section -->
 
 
         <!-- ======= F.A.Q Section ======= -->

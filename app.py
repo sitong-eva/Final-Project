@@ -3,6 +3,7 @@ from tarot_helper import answer
 from horoscope_helper import horoscope_yay
 import os
 import json
+from datetime import datetime
 
 app = Flask(__name__, static_folder="assets")
 
@@ -54,18 +55,35 @@ def general_get():
         return render_template("error.html")
 
 
-@app.route("/horoscope/", methods=["GET", "POST"])
+@app.route("/horoscope/", methods=["GET"])
 def horoscope_get():
-    if request.method == "POST":
-        dob=request.json['dob']
-        reading_type=request.json['readingType']
-        # print(dob)
-        return render_template("horoscope_result.html",horoscope_result=dob)
-        # horoscope_result=horoscope_yay
-    #     return render_template(
-    #         "horoscope_result.html", horoscope_result=horoscope_result
-    #     )
-    # return render_template("error.html")
+    try:
+        # general_result = answer("yearly forecast")
+        # print(general_result)
+        return render_template("horoscope_landing.html")
+    except:
+        return render_template("error.html")
+
+
+@app.route('/horoscope_reading', methods=['POST'])
+def horoscope_reading():
+    month = request.form['birth-month']
+    day = request.form['birth-day']
+    print(month)
+    h = horoscope_yay(month, day)
+    return render_template("horoscope_result.html", horoscope_result=h)
+
+# def horoscope():
+#     if request.method == "POST":
+#         dob_str=request.json['dob']
+#         dob = datetime.strptime(dob_str, '%Y-%m-%d')
+#         month = dob.month
+#         day = dob.day
+#         print(month)
+#         print(day)
+#         horoscope_return=horoscope_yay(month,day)
+#         print(horoscope_return)
+#         return render_template("horoscope_result.html",horoscope_result=horoscope_return)
 
 
 if __name__ == "__main__":
