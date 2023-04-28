@@ -26,6 +26,24 @@ def love_get():
         return render_template("love_reading_result.html", love_result=love_result)
     except:
         return render_template("error.html")
+    
+@app.route("/career_reading/", methods =['GET'])
+def career_get():
+    try:
+        career_result = answer("career")
+        print(career_result)
+        return render_template("career_reading_result.html", career_result=career_result)
+    except:
+        return render_template("error.html")
+
+@app.route("/general_reading/", methods =['GET'])
+def general_get():
+    try:
+        general_result = answer("yearly forecast")
+        print(general_result)
+        return render_template("general_reading_result.html", general_result=general_result)
+    except:
+        return render_template("error.html")
 
 
 if __name__ == "__main__":
