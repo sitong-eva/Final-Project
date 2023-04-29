@@ -76,6 +76,7 @@ def horoscope_yay(month,day):
     Combines the two, woopdedoo~
     """
     s=get_sign(month,day) 
+    print(s)
     h=daily_horoscope(s)
     return h
 
