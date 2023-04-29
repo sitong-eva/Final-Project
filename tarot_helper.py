@@ -3,9 +3,8 @@ import json
 import random
 import os
 import openai
-from config import OPENAI_KEY
 
-openai.api_key = OPENAI_KEY
+openai.api_key = os.environ["OPENAI_KEY"]
 # Tarot API
 url = "https://tarot-api.onrender.com/api/v1/cards"
 response = requests.get(url)
