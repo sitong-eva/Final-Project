@@ -13,12 +13,12 @@ The horoscope predictions are generated daily based on the user's zodiac sign, a
 This web app was built using HTML, CSS, JavaScript, Python, and Flask. 
 ### Images
 The images were sourced from Google Images. 
-[Image 1](https://as1.ftcdn.net/v2/jpg/04/08/54/60/1000_F_408546090_EzfnwBcsNmBtQiJ3qSNrDMm35ly5FMPJ.jpg)
-[Image 2](https://www.etsy.com/listing/1386300536/love-tarot-spread)
+[Image 1, ](https://as1.ftcdn.net/v2/jpg/04/08/54/60/1000_F_408546090_EzfnwBcsNmBtQiJ3qSNrDMm35ly5FMPJ.jpg)
+[Image 2, ](https://www.etsy.com/listing/1386300536/love-tarot-spread)
 [Image 3](https://www.freepik.com/premium-vector/soothsayer-fortune-teller-guessing-tarot-cards_22438986.htm)
 ### APIs
 The tarot card data is retrieved using [ekelen's Tarot API.](https://tarot-api.onrender.com/)
-The horoscope data is retrieved using a webscraper, created with BeautifulSoup, to scrape Horoscope.com. OpenAI API was also used for the interpretation of the Tarot Readings, as well as ChatGPT was also used to assist with coding.
+The horoscope data is retrieved using a webscraper, created with BeautifulSoup, to scrape Horoscope.com. [OpenAI API](https://openai.com/blog/openai-api) was also used for the interpretation of the Tarot Readings, as well as ChatGPT was also used to assist with coding.
 ### Website Template
 The template used for this Web app was [Ninestars from BootstrapMade](https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/download/)
 ### Hosting
